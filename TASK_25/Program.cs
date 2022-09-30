@@ -2,13 +2,33 @@
 3, 5 -> 243 (3⁵)
 2, 4 -> 16   */
 
+// Вариант 1
+// Console.WriteLine("Введите число A:  ");
+// int num1 = int.Parse(Console.ReadLine());
+
+// Console.WriteLine("Введите число B:  ");
+// int num2 = int.Parse(Console.ReadLine());
+
+// {
+//     double result = Math.Pow(num1, num2);
+//     Console.Write($"{result} ");
+// }
+
+//Вариант 2
 Console.WriteLine("Введите число A:  ");
 int num1 = int.Parse(Console.ReadLine());
 
 Console.WriteLine("Введите число B:  ");
 int num2 = int.Parse(Console.ReadLine());
 
+ToDegree(num1, num2);
+
+void ToDegree(int A, int B)
 {
-    double result = Math.Pow(num1, num2);
-    Console.Write($"{result} ");
+    int result = 1;
+    for (int i = 1; i <= B; i++)
+    {
+        result = result * A;
+    }
+    Console.WriteLine($"{result} ");
 }
